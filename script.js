@@ -12,7 +12,7 @@ let weather = {
     },
     displayWeather: function (data) {
     const { name } = data;
-    const { icon , description } = data.weather[0];
+    const { icon , description, main } = data.weather[0];
     const { temp, humidity } = data.main;
     const { speed } = data.wind;
     document.querySelector(".description").innerText = description;
@@ -22,7 +22,7 @@ let weather = {
     document.querySelector(".wind").innerText = "Wind speed:  " + speed + "m/s";
     document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
     document.querySelector(".weather").classList.remove("loading");
-    document.body.style.backgroundImage = "url('https://source.unsplash.com/2560x1440/?" + name + "')"
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/2560x1440/?" + main + " sky"
     }, 
 
     search: function () {
