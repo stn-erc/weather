@@ -22,7 +22,7 @@ let weather = {
     document.querySelector(".wind").innerText = "Wind speed:  " + speed + "m/s";
     document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
     document.querySelector(".weather").classList.remove("loading");
-    document.body.style.backgroundImage = "url('https://source.unsplash.com/2560x1440/?" + main + " sky"
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/2560x1440/?" + name + "')"
     }, 
 
     search: function () {
